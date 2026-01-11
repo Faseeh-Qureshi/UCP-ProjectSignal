@@ -1,0 +1,5 @@
+{
+  "name": "UCP-ProjectSignal",
+  "description": "A centralized university platform for showcasing Final Year Projects, managing submissions, faculty validation, and artifact visibility.",
+  "requestFramePermissions": []
+}
