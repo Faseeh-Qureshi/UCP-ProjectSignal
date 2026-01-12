@@ -142,6 +142,6 @@ The system implements strict Role-Based Access Control (RBAC):
 
 ## 6. License & Compliance
 
-**© 2024 University of Central Punjab.** All Rights Reserved.
+**© 2026 University of Central Punjab.** All Rights Reserved.
 
 This software is proprietary to UCP. Unauthorized reproduction, distribution, or reverse engineering of the "Signal" verification logic is strictly prohibited. Student intellectual property displayed within the platform retains the licensing model specified by the respective author (e.g., MIT, Proprietary, Creative Commons).
