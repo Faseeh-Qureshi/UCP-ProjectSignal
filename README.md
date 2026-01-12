@@ -4,6 +4,15 @@
 > *University of Central Punjab*
 
 ---
+**Problem:**
+
+Universities lack a structured, institution-backed way to preserve and present final-year project work 
+as credible evidence of students’ applied skills beyond grades and transcripts.
+
+**Solution**:
+
+A university-managed platform that archives, validates, and showcases final-year projects 
+as trusted, faculty-endorsed proof of applied student capability.
 
 ## 1. Executive Summary
 
@@ -22,6 +31,8 @@ A public-facing, high-performance digital gallery allowing external stakeholders
 *   **Dynamic Lenses:** Filter by Dean’s List, Industry Track, Research R&D, and Venture Readiness.
 *   **Cohort Analysis:** Longitudinal tracking of project trends across academic terms (Fall/Spring/Summer).
 *   **Search Intelligence:** Semantic search across abstracts, tags, and supervisor attributions.
+
+
 
 ### II. Academic Governance Console (Faculty)
 A robust suite of tools for supervisors and department heads to maintain rigor.
