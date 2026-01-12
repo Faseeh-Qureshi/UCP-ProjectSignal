@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { User, UserRole } from '../types';
 import { MOCK_USERS } from '../constants';
-import { Building2, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronRight, GraduationCap, ShieldCheck, Users, Lock, CheckCircle2, Server, Terminal } from 'lucide-react';
 
 interface LoginProps {
   onLogin: (user: User) => void;
@@ -13,60 +13,145 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
   const handleLogin = () => {
     setLoading(true);
-    // Simulate network request
     setTimeout(() => {
-        // Find a mock user for this role
-        // For Faculty, we default to CS, but in a real app, auth determines this
-        // We added a workaround in App.tsx to switch faculty for demo
         const user = MOCK_USERS.find(u => u.role === selectedRole);
         if (user) onLogin(user);
         setLoading(false);
-    }, 800);
+    }, 1000);
   };
 
   return (
-    <div className="min-h-screen flex bg-[#fafaf9]">
-      {/* Visual Side (Art) */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-        
-        <div className="relative z-10 flex flex-col justify-end p-16">
-            <h1 className="text-5xl font-serif text-white mb-6 leading-tight">
-                Where <span className="italic text-indigo-300">Academic rigor</span> meets <br/> professional <span className="italic text-emerald-300">visibility</span>.
-            </h1>
-            <p className="text-slate-300 text-lg max-w-md leading-relaxed">
-                The centralized platform for validating, curating, and showcasing final-year excellence across all disciplines.
-            </p>
-        </div>
+    <div className="min-h-screen flex font-sans overflow-hidden bg-slate-900">
+      
+      {/* Background Image Layer */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+            backgroundImage: "url('https://horizon.ucp.edu.pk/aarsol_custom_loginpage/static/img/ucp_bg.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-ucp-navy/95 to-ucp-crimson/90 mix-blend-multiply"></div>
+        {/* Subtle animated noise */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]"></div>
       </div>
 
-      {/* Functional Side (Science) */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
-        <div className="max-w-md w-full space-y-8">
-            <div className="text-center">
-                <div className="mx-auto h-16 w-16 bg-slate-900 rounded-2xl flex items-center justify-center shadow-xl mb-6">
-                    <Building2 className="h-8 w-8 text-white" />
-                </div>
-                <h2 className="text-3xl font-serif font-bold text-slate-900 tracking-tight">Welcome Back</h2>
-                <p className="mt-2 text-slate-500">Sign in to access the university signal platform.</p>
-            </div>
+      {/* Content Container */}
+      <div className="relative z-10 w-full flex flex-col lg:flex-row h-screen">
+          
+          {/* Left Column: Brand & Vision */}
+          <div className="hidden lg:flex lg:w-3/5 flex-col justify-between p-20 text-white relative overflow-hidden">
+              {/* Decorative Circle */}
+              <div className="absolute -top-20 -left-20 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
+              <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-10">
+                    <img 
+                        src="https://ucp.edu.pk/inc/uploads/2019/06/ucp-sticky-logo-white-1.png" 
+                        alt="UCP Logo" 
+                        className="h-16"
+                    />
+                    <div className="h-12 w-px bg-white/20"></div>
+                    <div className="flex flex-col">
+                         <span className="text-xl font-bold tracking-tight">Horizon</span>
+                         <span className="text-xs uppercase tracking-[0.2em] opacity-70">Identity Provider</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 max-w-2xl animate-fade-in-up">
+                      <span className="inline-block px-3 py-1 bg-ucp-gold/20 backdrop-blur-md rounded-full text-ucp-gold text-xs font-bold tracking-[0.2em] uppercase border border-ucp-gold/30">
+                          Project Intelligence Platform
+                      </span>
+                      <h1 className="text-7xl font-serif font-bold leading-none tracking-tight text-white">
+                          Project<span className="text-white/40">Signal</span>
+                      </h1>
+                      <p className="text-2xl text-white/70 mt-6 font-light leading-relaxed">
+                          Where academic excellence meets verifiable proof of work. 
+                          <span className="block text-white mt-2 font-medium">Your work, your signal.</span>
+                      </p>
+                  </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-6 relative z-10">
+                  <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                      <GraduationCap className="w-8 h-8 text-ucp-gold mb-4" />
+                      <h3 className="font-bold text-white text-base">Student Portfolios</h3>
+                      <p className="text-sm text-white/50 mt-2 leading-relaxed">Showcase applied skills beyond static transcripts.</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                      <ShieldCheck className="w-8 h-8 text-ucp-gold mb-4" />
+                      <h3 className="font-bold text-white text-base">Faculty Verified</h3>
+                      <p className="text-sm text-white/50 mt-2 leading-relaxed">Endorsed competencies and validated outcomes.</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                      <Users className="w-8 h-8 text-ucp-gold mb-4" />
+                      <h3 className="font-bold text-white text-base">Industry Ready</h3>
+                      <p className="text-sm text-white/50 mt-2 leading-relaxed">Connecting top talent with corporate opportunity.</p>
+                  </div>
+              </div>
+              
+              <div className="text-xs text-white/30 flex gap-6 mt-8">
+                  <span>© {new Date().getFullYear()} University of Central Punjab</span>
+                  <span>System Version 2.4.0 (Stable)</span>
+                  <span>Privacy Policy</span>
+              </div>
+          </div>
+
+          {/* Right Column: Login Form */}
+          <div className="w-full lg:w-2/5 flex items-center justify-center p-6 bg-white/5 lg:bg-[#f8fafc]">
+             <div className="bg-white rounded-[2rem] shadow-2xl p-8 sm:p-12 w-full max-w-[440px] border border-slate-200 relative overflow-hidden">
+                {/* Decorative Top Bar */}
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-ucp-navy to-ucp-crimson"></div>
+
+                <div className="text-center mb-10">
+                     <div className="h-16 w-16 mx-auto bg-ucp-navy rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-ucp-navy/20 rotate-3">
+                        <GraduationCap className="text-white w-8 h-8"/>
+                     </div>
+
+                    <h2 className="text-2xl font-bold text-slate-900 font-serif mb-2">Institutional Sign In</h2>
+                    <p className="text-slate-500 text-sm">Welcome back. Please authenticate to access the ProjectSignal network.</p>
+                </div>
+
+                {/* Microsoft Login Button Style */}
+                <button
+                    onClick={handleLogin}
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-3 bg-[#2F2F2F] hover:bg-black text-white p-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 border border-transparent active:scale-[0.98] mb-8"
+                >
+                    {loading ? (
+                        <span className="text-sm font-bold animate-pulse">Verifying Credentials...</span>
+                    ) : (
+                        <>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21"><rect x="1" y="1" width="9" height="9" fill="#f25022"></rect><rect x="1" y="11" width="9" height="9" fill="#00a4ef"></rect><rect x="11" y="1" width="9" height="9" fill="#7fba00"></rect><rect x="11" y="11" width="9" height="9" fill="#ffb900"></rect></svg>
+                            <span className="text-sm font-bold">Sign in with Microsoft 365</span>
+                        </>
+                    )}
+                </button>
                 
-                <div className="space-y-4">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Select Access Role</label>
-                    <div className="grid grid-cols-2 gap-3">
+                <div className="relative mb-8">
+                    <div className="absolute inset-0 flex items-center">
+                        <div className="w-full border-t border-slate-200"></div>
+                    </div>
+                    <div className="relative flex justify-center text-xs uppercase">
+                        <span className="bg-white px-2 text-slate-400 font-bold tracking-wider">Demo Configuration</span>
+                    </div>
+                </div>
+
+                {/* Role Simulator (Styled as Dev Tools) */}
+                <div className="bg-slate-50 rounded-xl border border-slate-200 p-4 mb-4">
+                    <div className="flex items-center gap-2 mb-3 text-slate-400">
+                        <Terminal className="w-3 h-3" />
+                        <span className="text-[10px] font-bold uppercase tracking-wider">Role Simulation Controller</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
                         {Object.values(UserRole).map((role) => (
                             <button
                                 key={role}
                                 onClick={() => setSelectedRole(role)}
-                                className={`p-3 text-sm font-bold rounded-xl border-2 transition-all duration-200 flex items-center justify-center
-                                    ${selectedRole === role 
-                                        ? 'border-slate-800 bg-slate-800 text-white shadow-md' 
-                                        : 'border-slate-100 bg-white text-slate-500 hover:border-slate-300'
-                                    }
-                                `}
+                                className={`flex items-center justify-center p-2.5 rounded-lg text-xs font-bold transition-all duration-200 border ${
+                                    selectedRole === role 
+                                    ? 'bg-white border-ucp-navy text-ucp-navy shadow-sm' 
+                                    : 'bg-transparent border-transparent text-slate-500 hover:bg-slate-200/50'
+                                }`}
                             >
                                 {role}
                             </button>
@@ -74,26 +159,14 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                     </div>
                 </div>
 
-                <div className="pt-4">
-                    <button
-                        onClick={handleLogin}
-                        disabled={loading}
-                        className="w-full flex items-center justify-center py-4 px-6 border border-transparent rounded-xl text-base font-bold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg shadow-indigo-200 transition-all active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
-                    >
-                        {loading ? 'Authenticating...' : (
-                            <>
-                                Continue to Dashboard <ArrowRight className="ml-2 w-5 h-5" />
-                            </>
-                        )}
-                    </button>
+                <div className="mt-8 flex flex-col items-center gap-2">
+                    <div className="flex items-center gap-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                        <Lock className="w-3 h-3" />
+                        <span>Secured by UCP Horizon SSO</span>
+                    </div>
                 </div>
-            </div>
-
-            <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
-                <ShieldCheck className="w-4 h-4" />
-                <span>Secure Institutional Access • SSO Enabled</span>
-            </div>
-        </div>
+             </div>
+          </div>
       </div>
     </div>
   );

@@ -3,27 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>UCP-ProjectSignal | Stanford Ecosystem</title>
+    <title>UCP ProjectSignal | University of Central Punjab</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts: Playfair Display for "Art/Prestige", Inter for "Science/Clarity" -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Fonts: Playfair Display for "Prestige", Inter for "Clarity" -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ucp: {
+                crimson: '#98002E', // Approx UCP Red
+                navy: '#1D2C55',    // UCP Navy from login snippet
+                gold: '#C5A059',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              display: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
     <style>
       :root {
-        --glass-surface: rgba(255, 255, 255, 0.85);
+        --glass-surface: rgba(255, 255, 255, 0.7);
         --glass-border: rgba(255, 255, 255, 0.5);
       }
 
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #fafaf9; /* Warm Stone-50 */
-        color: #1c1917;
+        background-color: #f8fafc;
+        color: #1e293b;
       }
 
-      h1, h2, h3, h4, h5, h6, .font-serif {
-        font-family: 'Playfair Display', serif;
-      }
-
-      /* Noise Texture for 'Paper' feel */
+      /* Noise Texture for 'Premium Paper' feel */
       .bg-texture {
         position: fixed;
         top: 0;
@@ -41,15 +57,25 @@
         width: 6px;
       }
       ::-webkit-scrollbar-thumb {
-        background: #a8a29e; 
+        background: #cbd5e1; 
         border-radius: 10px;
       }
       
-      .glass-card {
-        background: var(--glass-surface);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--glass-border);
+      .custom-scrollbar::-webkit-scrollbar {
+          width: 5px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+          background-color: #e2e8f0;
+          border-radius: 4px;
+      }
+
+      .animate-fade-in-up {
+          animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
       }
       
       .text-balance { text-wrap: balance; }
