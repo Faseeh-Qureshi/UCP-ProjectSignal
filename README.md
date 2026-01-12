@@ -32,6 +32,17 @@ A public-facing, high-performance digital gallery allowing external stakeholders
 *   **Cohort Analysis:** Longitudinal tracking of project trends across academic terms (Fall/Spring/Summer).
 *   **Search Intelligence:** Semantic search across abstracts, tags, and supervisor attributions.
 
+<img width="1902" height="875" alt="image" src="https://github.com/user-attachments/assets/777d9345-0011-4e7d-bbb8-5aace20d48f1" />
+
+<img width="1893" height="870" alt="image" src="https://github.com/user-attachments/assets/090f5759-0acc-41ec-9d71-5946cc90a6ca" />
+
+<img width="1879" height="870" alt="image" src="https://github.com/user-attachments/assets/b1444687-98b3-4eaa-867a-58f838d66769" />
+
+<img width="1900" height="881" alt="image" src="https://github.com/user-attachments/assets/89624aa1-1aa9-47b1-a2cf-70b966ec68a9" />
+
+<img width="1903" height="877" alt="image" src="https://github.com/user-attachments/assets/5b70b715-1f91-4279-8f3f-03a2adb77086" />
+
+<img width="1890" height="879" alt="image" src="https://github.com/user-attachments/assets/55d5414a-d0b6-4ac3-90a4-045c04898ad2" />
 
 
 ### II. Academic Governance Console (Faculty)
@@ -40,11 +51,38 @@ A robust suite of tools for supervisors and department heads to maintain rigor.
 *   **Hall of Fame Curation:** Selective promotion of top-tier projects to the "Dean’s Choice" collection.
 *   **Competency Validation:** Granular verification of individual team member contributions and skills (e.g., verifying "React" competency for a specific student).
 
+<img width="1905" height="876" alt="image" src="https://github.com/user-attachments/assets/21914658-5a0e-4dcf-bd89-437f7f239196" />
+
+<img width="1898" height="879" alt="image" src="https://github.com/user-attachments/assets/87f26651-14d3-4147-a7f6-7f3192fa5c8f" />
+
+
+<img width="1892" height="879" alt="image" src="https://github.com/user-attachments/assets/480ef584-e612-43e5-856c-19696a703805" />
+
+<img width="1892" height="874" alt="image" src="https://github.com/user-attachments/assets/047ab0ec-719c-4a64-9e52-d5415e1223ef" />
+
+<img width="1878" height="866" alt="image" src="https://github.com/user-attachments/assets/a670157a-b2c8-4b3a-a08a-62bd439f2ecd" />
+
+
+
 ### III. Student Portfolio Workspace
 A professional environment for students to formalize their academic identity.
 *   **Artifact Management:** Secure hosting for research papers (PDF), code repositories (GitHub), and multimedia assets.
 *   **Team Roster:** Credit attribution for collaborative efforts.
 *   **Endorsement Tracking:** Real-time visibility into industry and faculty endorsements.
+
+<img width="1891" height="866" alt="image" src="https://github.com/user-attachments/assets/c6ef8e2d-d5d1-4712-a81e-01da9f402147" />
+
+
+<img width="1868" height="849" alt="image" src="https://github.com/user-attachments/assets/ed11badc-7726-4544-a223-82ea62908b63" />
+
+
+<img width="1868" height="874" alt="image" src="https://github.com/user-attachments/assets/9d40076e-fcdd-4c2e-b689-8408587fd04e" />
+
+
+
+<img width="1720" height="839" alt="image" src="https://github.com/user-attachments/assets/21f5d57f-c722-4ceb-bbaf-e62f2bd8564c" />
+
+<img width="1892" height="856" alt="image" src="https://github.com/user-attachments/assets/950514d2-afc1-4839-b137-0f41ba71e575" />
 
 ---
 
