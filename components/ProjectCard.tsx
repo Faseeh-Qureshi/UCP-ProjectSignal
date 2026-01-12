@@ -112,7 +112,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, userRole, onApprove,
             </div>
 
             {/* Metrics */}
-            <div className="flex items-center gap-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+            <div className="flex items-center gap-2.5 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                 <span className="flex items-center bg-slate-50 px-2 py-1 rounded border border-slate-100">
                     <Calendar className="w-3 h-3 mr-1" /> {project.term} {project.year}
                 </span>
